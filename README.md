@@ -55,6 +55,18 @@ docker run -p 8080:8080 konflux-demo:latest
 curl http://localhost:8080
 ```
 
+### Podman Build (Alternative)
+```bash
+# Build the image
+podman build -t konflux-demo:latest .
+
+# Run the container
+podman run -p 8080:8080 konflux-demo:latest
+
+# Test the endpoint
+curl http://localhost:8080
+```
+
 ## Expected CI Tool Findings
 
 Your CI security scanning tool should detect:
