@@ -16,7 +16,7 @@ COPY . .
 RUN CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o hello-world .
 
 # Runtime stage - using outdated alpine:3.12 (released May 2020)
-FROM alpine:3.12
+FROM alpine:3.23
 
 # Install ca-certificates for HTTPS
 RUN apk --no-cache add ca-certificates
